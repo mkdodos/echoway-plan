@@ -1,0 +1,45 @@
+{
+  "name": "abc",
+  "version": "1.0.0",
+  "description": "plan",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkdodos/echoway-plan.git"
+  },
+  "keywords": [
+    "no"
+  ],
+  "author": "mark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkdodos/echoway-plan/issues"
+  },
+  "homepage": "/mkdodos/echoway-plan",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "highcharts": "^11.4.6",
+    "highcharts-react-official": "^3.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.1",
+    "react-scripts": "^5.0.1",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
