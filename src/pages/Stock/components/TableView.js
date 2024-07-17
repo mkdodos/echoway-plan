@@ -1,34 +1,39 @@
 import React from 'react';
-import { Table } from 'semantic-ui-react';
+import { Table,TableHeader,TableHeaderCell,TableBody,TableRow,TableCell } from 'semantic-ui-react';
 
 export default function TableView({
-  rows 
+  rows,
+  totalCost,
+  avgCost 
 }) {  
 
 
   return (
     <div>
       <Table celled unstackable>
-        <Table.Header>
-          <Table.Row>
+        <TableHeader>
+          <TableRow>
             {/* <Table.HeaderCell width={2}>id</Table.HeaderCell> */}
-            <Table.HeaderCell width={2}>日期</Table.HeaderCell>
-            <Table.HeaderCell width={2}>成交價</Table.HeaderCell> 
+            <TableHeaderCell width={2}>日期</TableHeaderCell>
+            <TableHeaderCell width={2}>成交價{totalCost}</TableHeaderCell> 
+            {/* <Table.HeaderCell width={2}>平均成本{Math.round(avgCost*100)/100}</Table.HeaderCell>  */}
+            <TableHeaderCell width={2}>avg</TableHeaderCell> 
             
-          </Table.Row>
-        </Table.Header>
+          </TableRow>
+        </TableHeader>
 
-        <Table.Body>
+        <TableBody>
           {rows.map((row, index) => {
             return (
-              <Table.Row key={row.id}>
-                <Table.Cell>{row.inDate}</Table.Cell>
-                <Table.Cell>{row.price}</Table.Cell>
-                {/* <Table.Cell>{row.offType}</Table.Cell>                             */}
-              </Table.Row>
+              <TableRow key={row.id}>
+                <TableCell>{row.inDate}</TableCell>
+                <TableCell>{row.price}</TableCell>
+                 
+                <TableCell>{Math.round(row.avg*100)/100}</TableCell>                             
+              </TableRow>
             );
           })}
-        </Table.Body>
+        </TableBody>
       </Table>
     </div>
   );

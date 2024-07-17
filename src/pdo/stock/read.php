@@ -13,10 +13,17 @@ $table= "stock";
 $dateField = "inDate";
 // $dateField = "";
 
+// $query = " SELECT TOP 50
+//     id,
+//     inDate,
+//     price,
+//     avgCost   
+//     FROM $table      
+//     ORDER BY id 
+// ";
+
 $query = " SELECT TOP 50
-    id,
-    inDate,
-    price   
+    *
     FROM $table      
     ORDER BY id 
 ";
